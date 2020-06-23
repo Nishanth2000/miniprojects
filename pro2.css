@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 35px;
+    line-height: 40px;
+    padding: 0 100px;
+    font-family: sans-serif;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+nav {
+    background: blue;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 7px 7px;
+}
+
+nav .mainMenu {
+    display: flex;
+    list-style: none;
+}
+
+nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-size: 20px;
+    width: 160px;
+    font-weight: bold;
+}
+
+nav .mainMenu li a:hover {
+    background: red;
+    opacity: .8;
+    border-radius: 5px 5px;
+}
+
+nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu,
+.icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+.fa-facebook:hover {
+    color: rgb(0, 110, 255);
+}
+
+.fa-twitter:hover {
+    color: rgb(86, 154, 243);
+}
+
+.fa-instagram:hover {
+    color: rgb(255, 0, 191);
+}
+
+.fa-github:hover {
+    color: rgb(255, 123, 0);
+}
+
+nav .logo {
+    margin: 6px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media(max-width: 1024px) {
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgb(50, 127, 172);
+        color: black;
+        transition: top 1s ease;
+        display: none;
+    }
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: black;
+    }
+    nav .openMenu {
+        display: block;
+    }
+    nav .mainMenu li a:hover {
+        background: none;
+        color: red;
+        font-size: 1.6rem;
+    }
+    .icons i {
+        display: inline-block;
+        padding: 12px;
+    }
+}
+
+.image img {
+    margin-top: 25px;
+    width: 400px;
+    float: right;
+}
+
+p {
+    margin: 10px;
+    margin-top: 50px;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 900px;
+}
+
+button {
+    width: 155px;
+    height: 50px;
+    margin-top: 15px;
+    background-color: blue;
+    border-radius: 15px;
+    margin-left: 350px;
+    font-size: 20px;
+    color: white;
+}
+
+button:hover {
+    background-color: red;
+}
+
+.parent {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 400px 400px 400px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.child:nth-child(odd) {
+    background-color: white;
+    color: rebeccapurple;
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+.child:nth-child(even) {
+    background-color: white;
+    color: white;
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+}
